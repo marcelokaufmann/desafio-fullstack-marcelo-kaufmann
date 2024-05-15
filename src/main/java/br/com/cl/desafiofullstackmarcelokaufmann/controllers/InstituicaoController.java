@@ -77,6 +77,21 @@ public class InstituicaoController {
     }
 
     /**
+     * Método para excluir instituição
+     *
+     * @author Marcelo Augusto Kaufmann
+     * @since   14/05/2024
+     * @version 1.0
+     *
+     */
+    @RequestMapping("/deletar")
+    public String deletarInstituicao(Integer id) {
+        Instituicao instituicao = instituicaoRepository.findById(id);
+        instituicaoRepository.delete(instituicao);
+        return "redirect:/instituicoes";
+    }
+
+    /**
      * Método para criação de evento
      *
      * @author Marcelo Augusto Kaufmann

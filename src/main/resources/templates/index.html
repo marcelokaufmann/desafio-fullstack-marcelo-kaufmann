@@ -32,12 +32,14 @@
                 <tr>
                     <th>Nome</th>
                     <th>Tipo</th>
+                    <th>Deletar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="instituicao : ${instituicoes}">
                     <td><a th:href="${(#mvc.url('IC#detalhesInstituicao').arg(0, instituicao.id)).build()}"><span th:text="${instituicao.nome}"></span></a></td>
                     <td><span th:text="${instituicao.tipo}"></span></td>
+                    <td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('IC#deletarInstituicao').arg(0, instituicao.id)).build()}"><i class="material-icons left">delete</i></a></td>
                 </tr>
             </tbody>
         </table>
