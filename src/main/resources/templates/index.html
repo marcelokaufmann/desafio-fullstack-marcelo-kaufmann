@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>DesafioApp</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" href="style/styleCss.css"/>
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">&nbsp;Sistema desafio desenvolvido por Marcelo Augusto Kaufmann</a>
+                </div>
+            </nav>
+        </header>
+
+        <th:block th:include="mensagemValidacao"></th:block>
+        <br>
+
+        <h3><a href="/cadastrarInstituicao" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar Instituição</a></h3>
+
+        <table class="container">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="instituicao : ${instituicoes}">
+                    <td><a th:href="${(#mvc.url('IC#detalhesInstituicao').arg(0, instituicao.id)).build()}"><span th:text="${instituicao.nome}"></span></a></td>
+                    <td><span th:text="${instituicao.tipo}"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    </body>
+</html>
