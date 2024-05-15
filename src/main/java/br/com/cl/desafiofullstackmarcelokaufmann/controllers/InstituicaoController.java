@@ -27,6 +27,14 @@ public class InstituicaoController {
         return "instituicao/formInstituicao";
     }
 
+    /**
+     * Método para criação de instituição
+     *
+     * @author Marcelo Augusto Kaufmann
+     * @since   14/05/2024
+     * @version 1.0
+     *
+     */
     @RequestMapping(value = "/cadastrarInstituicao", method = RequestMethod.POST)
     public String form(Instituicao instituicao) {
 
@@ -35,6 +43,15 @@ public class InstituicaoController {
         return "redirect:/cadastrarInstituicao";
     }
 
+
+    /**
+     * Método para preenchimento da grid de instituições
+     *
+     * @author Marcelo Augusto Kaufmann
+     * @since   14/05/2024
+     * @version 1.0
+     *
+     */
     @RequestMapping("/instituicoes")
     public ModelAndView listaInstituicoes() {
         ModelAndView mv = new ModelAndView("index");
@@ -43,6 +60,14 @@ public class InstituicaoController {
         return mv;
     }
 
+    /**
+     * Método para visualização de instituição
+     *
+     * @author Marcelo Augusto Kaufmann
+     * @since   14/05/2024
+     * @version 1.0
+     *
+     */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ModelAndView detalhesInstituicao(@PathVariable("id") Integer id) {
         Instituicao instituicao = instituicaoRepository.findById(id);
@@ -51,6 +76,14 @@ public class InstituicaoController {
         return mv;
     }
 
+    /**
+     * Método para criação de evento
+     *
+     * @author Marcelo Augusto Kaufmann
+     * @since   14/05/2024
+     * @version 1.0
+     *
+     */
     @RequestMapping(value = "/{id}", method = RequestMethod.POST)
     public String detalhesInstituicaoPost(@PathVariable("id") Integer id, Evento evento) {
         Instituicao instituicao = instituicaoRepository.findById(id);

@@ -29,7 +29,7 @@ public class UsuarioController {
      * Método para inclusão de usuário - perfil ADMIN
      *
      * @author Marcelo Augusto Kaufmann
-     * @since   02/02/2021
+     * @since   14/05/2024
      * @version 1.0
      *
      */
@@ -54,7 +54,7 @@ public class UsuarioController {
      * Método para preenchimento da grid de usuários - perfil ADMIN
      *
      * @author Marcelo Augusto Kaufmann
-     * @since   02/02/2021
+     * @since   14/05/2024
      * @version 1.0
      *
      */
@@ -70,7 +70,7 @@ public class UsuarioController {
      * Método para preenchimento da visualização de usuário em específico - perfil ADMIN
      *
      * @author Marcelo Augusto Kaufmann
-     * @since   02/02/2021
+     * @since   14/05/2024
      * @version 1.0
      *
      */
@@ -86,7 +86,7 @@ public class UsuarioController {
      * Método para alteração de usuário - perfil ADMIN
      *
      * @author Marcelo Augusto Kaufmann
-     * @since   31/01/2021
+     * @since   14/05/2024
      * @version 1.0
      *
      */
@@ -108,7 +108,7 @@ public class UsuarioController {
      * Método para exclusão de usuário - perfil ADMIN
      *
      * @author Marcelo Augusto Kaufmann
-     * @since   03/02/2021
+     * @since   14/05/2024
      * @version 1.0
      *
      */
